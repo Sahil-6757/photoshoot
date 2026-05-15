@@ -733,6 +733,98 @@ button {
     transform: scale(1.1);
 }
 
+/* Testimonials */
+.testimonials {
+    padding: 100px 0;
+    position: relative;
+}
+
+.testimonial-slider-container {
+    margin-top: 50px;
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+}
+
+.testimonial-track {
+    display: flex;
+    gap: 30px;
+    transition: transform 0.5s ease;
+}
+
+.testimonial-card {
+    flex: 0 0 calc(33.333% - 20px);
+    background: #0f0505;
+    border: 1px solid rgba(254, 0, 42, 0.2);
+    border-radius: 16px;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.quote-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(254, 0, 42, 0.1);
+    border: 1px solid rgba(254, 0, 42, 0.3);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    font-size: 1.2rem;
+}
+
+.testimonial-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    flex-grow: 1;
+    line-height: 1.6;
+}
+
+.customer-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.customer-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.customer-name {
+    font-weight: 700;
+    font-size: 1rem;
+    color: white;
+}
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.dot.active {
+    width: 30px;
+    background: var(--primary);
+    border-radius: 10px;
+}
+
 /* Responsive */
 @media (max-width: 992px) {
     .hero .container {
@@ -754,6 +846,10 @@ button {
 
     .footer-grid {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .testimonial-card {
+        flex: 0 0 calc(50% - 15px);
     }
 }
 
@@ -780,5 +876,9 @@ button {
     
     .store-buttons {
         flex-direction: column;
+    }
+
+    .testimonial-card {
+        flex: 0 0 100%;
     }
 }
